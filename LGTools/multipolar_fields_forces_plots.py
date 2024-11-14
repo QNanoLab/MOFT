@@ -29,8 +29,8 @@ def Z_forces_energy_plots(forces_disp_z, disp_array_z, Pot_z):
     ax2.plot(disp_array_z*1e6, (Pot_z)*1e18, color=color_e, linestyle='dashed')
     ax2.tick_params(axis='y', labelsize=12, labelcolor=color_e)
     ax2.margins(x=0)
-    # plt.savefig('Force_Energy_IMGs/Fz_Ez_W'+str(wl)+'_R'+str(r_p)+'_nr'+str(nr)+'_P='+str(p)+'_L1='+str(L_n_1)+'.svg', transparent=True)
-    plt.show()
+    plt.show(block=False)
+    plt.pause(0.001)
 
 def X_forces_energy_plots(forces_disp_x, disp_array_x, Pot_x):
     """
@@ -57,8 +57,8 @@ def X_forces_energy_plots(forces_disp_x, disp_array_x, Pot_x):
     ax2.tick_params(axis='y', labelsize=12, labelcolor=color_e)
     ax2.margins(x=0)
     ax2.yaxis.get_major_locator().set_params(integer=True)
-    # plt.savefig('Force_Energy_IMGs/Fx_Ex_W'+str(wl)+'_R'+str(r_p)+'_nr'+str(nr)+'_P='+str(p)+'_L1='+str(L_n_1)+'.svg', transparent=True)
-    plt.show()
+    plt.show(block=False)
+    plt.pause(0.001)
 
 def XZ_XY_fields_plots_INC(VX,VY,VZ,size_x, size_y, size_z, E_in_xz, E_in_xy):
     """
@@ -100,8 +100,8 @@ def XZ_XY_fields_plots_INC(VX,VY,VZ,size_x, size_y, size_z, E_in_xz, E_in_xy):
     ax2.text((0.55*(size_x)*1e6), -(0.75*(size_y)*1e6), 'Z=0', fontsize = 12, bbox = dict(facecolor = 'white', alpha = 0.5))
     fig.tight_layout()
     plt.subplots_adjust(hspace=-0.1)
-    #plt.savefig(dirname+'/Tot_field_W'+str(wl)+'_R'+str(r_p)+'_nr'+str(nr)+'_P='+str(p)+'_L1='+str(L_n_1)+'.png', transparent=True)
-    plt.show()
+    plt.show(block=False)
+    plt.pause(0.001)
 
 def XZ_XY_fields_plots_TOT(VX,VY,VZ,R,R2,r_p, size_x, size_y, size_z, E_tot_xz, E_int_xz, E_tot_xy, E_int_xy):
     """
@@ -154,8 +154,8 @@ def XZ_XY_fields_plots_TOT(VX,VY,VZ,R,R2,r_p, size_x, size_y, size_z, E_tot_xz, 
     ax2.text((0.55*(size_x)*1e6), -(0.75*(size_y)*1e6), 'Z=0', fontsize = 12, bbox = dict(facecolor = 'white', alpha = 0.5))
     fig.tight_layout()
     plt.subplots_adjust(hspace=-0.1)
-    #plt.savefig(dirname+'/Tot_field_W'+str(wl)+'_R'+str(r_p)+'_nr'+str(nr)+'_P='+str(p)+'_L1='+str(L_n_1)+'.png', transparent=True)
-    plt.show()
+    plt.show(block=False)
+    plt.pause(0.001)
 
 def On_axis_multipolar_coefficients_plot(p, D_C_l_1, D_C_l_m1, alpha_array, beta_array, l_vis_lim=15):
     """
@@ -195,4 +195,5 @@ def On_axis_multipolar_coefficients_plot(p, D_C_l_1, D_C_l_m1, alpha_array, beta
     plt.legend(loc='upper center', bbox_to_anchor=(0.5, 1.3), labelspacing=0.2, fancybox=True, shadow=False, ncol=3).legendPatch.set_edgecolor("dimgrey")
     # plt.savefig(dirname+'/Coeff_'+'_L1='+str(L_n_1)+'.svg')
     plt.title('ON-FOCUS CONFIGURATION', y=1.25)
-    plt.show()
+    plt.show(block=False)
+    plt.pause(0.001)

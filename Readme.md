@@ -28,8 +28,9 @@ For running in the command line:
 ```sh
 python OT_EQUILIBRIUM_POINT_ANALYSIS.py --plot-forces --plot-fields
 ```
+Note: Interaction with the plotted figures may not be available until the program completes all the calculations. Close every figure window to finish the program.
 
-The default simmulation parameters show the following figures:
+The default simulation parameters show the following figures:
 
 ![image](base_plots_MOFT.png)
 
@@ -44,7 +45,7 @@ For the moment, **this toolbox is designed to be used only on Linux OS**.
   - `vsh` generate the Vector Spherical Harmonics (vsh) and the near- and far-field versions of the Well-defined Helicity Multipoles.
   - Miscellaneous auxiliary functions: `beam`, `coordinates_converter`, `equilibrium_point_finders`, `multipolar_fields_forces_plots`, and `summation_of_multipoles`.
 
-- `TRANSLATION_MATRICES` contains precalculated displacement matrices to improve the speed of the multipole expansion for displaced beams. This matrices, that were precalculated for different diplacements, can be iteratively combined and applied to the on-focus Beam Shape Coefficients to generate displaced beams.
+- `TRANSLATION_MATRICES` contains precalculated displacement matrices to improve the speed of the multipole expansion for displaced beams. These matrices, which were precalculated for different displacements, can be iteratively combined and applied to the on-focus Beam Shape Coefficients to generate displaced beams.
 
 - The main program `OT_EQUILIBRIUM_POINT_ANALYSIS.py` calculates the optical forces and torques at the equilibrium point of the optical trap.
 
@@ -57,7 +58,7 @@ For this purpose, the main program **"OT_EQUILIBRIUM_POINT_ANALYSIS.py"** must b
     - 3.1. If there is no equilibrium point in the z-axis, "NO TRAPPING IN Z" is printed. END OF THE PROGRAM.
     - 3.2. If there is an equilibrium point in the z-axis, calculate Fx while the beam is displaced along the x-axis from the equilibrium point of the z-axis and determine the equilibrium point in the x-axis.
        - 3.2.1. If the equilibrium point in the x-axis occurs when the displacement of the beam in this axis is equal to zero, data for the on-axis equilibrium point is printed: kx, fx, kz, fz, Tz, (Fx=Fy=Fz=0, Tx=Ty=0). Electromagnetic fields of the optical trapping system at the equilibrium point are plotted. END OF THE PROGRAM.
-       - 3.2.2. If the equilibrium point in the x-axis occurs when the displacement of the beam in this axis is different from zero, the new equilibrium point off-axis is calculated. Then, data for the off-axis equilibrium point is printed: Fy (Fx and Fz should approach zero), kx, fx, kz, fz, Tx, Ty, Tz.Electromagnetic fields of the optical trapping system at the equilibrium point are plotted. END OF THE PROGRAM.
+       - 3.2.2. If the equilibrium point in the x-axis occurs when the displacement of the beam in this axis is different from zero, the new equilibrium point off-axis is calculated. Then, data for the off-axis equilibrium point is printed: Fy (Fx and Fz should approach zero), kx, fx, kz, fz, Tx, Ty, Tz. Electromagnetic fields of the optical trapping system at the equilibrium point are plotted. END OF THE PROGRAM.
 
 Set `show_force_plots` and `show_field_plots` to True or False to control the display of plots.
 Alternatively, if command line is used, these variables can be controlled by `--plot-forces` and `--plot-fields`. 

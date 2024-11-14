@@ -46,8 +46,6 @@ else:
 del sys
 
 
-
-
 import numpy as np
 import argparse
 from LGTools.coefficients import coefficients_focus, BHCoefficients, coefficients_Z_disp_TM, Z_disp_TM_chain, XY_disp_TM_chain, coefficients_XY_disp_TM
@@ -61,7 +59,7 @@ from LGTools.beam import w_0_size
 from scipy import constants as spc
 from multiprocessing import Pool
 from tqdm import trange
-
+import matplotlib.pyplot as plt
 
 
 # %%
@@ -495,5 +493,6 @@ if eq_true==1:
 else:
     print("NO TRAPPING IN Z")
 
+plt.show()
 
 # %%

@@ -1,6 +1,6 @@
 MOFT - Multipolar Optical Forces Toolbox
 ===============================================================
-
+[![DOI](https://zenodo.org/badge/877272644.svg)](https://doi.org/10.5281/zenodo.14514658)
 ## General Description
 `Multipolar Optical Forces Toolbox` is a Python code that allows to calculate the optical forces, torques and electromagnetic fields of optical systems formed by focused Laguerre-Gaussian beams (linearly or circularly polarized) impinging on spherical particles.
 

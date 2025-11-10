@@ -324,7 +324,7 @@ if eq_true==1:
         forces_disp_x[steps_x//2-d]=-(I_0) * F_x
 
     Pot_x = Energy_from_forces(forces_disp_x, step_size_x)
-    k_x = forces_disp_x[steps_x//2]-forces_disp_x[steps_x//2-1]/(step_size_x)
+    k_x = (forces_disp_x[steps_x//2]-forces_disp_x[steps_x//2-1])/(step_size_x)
 
     if k_x>0:
         if show_force_plots:
